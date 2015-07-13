@@ -55,6 +55,12 @@ Finally, you can always set the environment by hand in your task definition:
 
     environments.current(development);
 
+## Other environments
+
+You don't have to limit yourself to using only the two provided environments. You can create other ones by calling (in the example, we are creating an environment called staging):
+
+    var staging = environments.make("staging");
+
 ## License
 
 MIT
