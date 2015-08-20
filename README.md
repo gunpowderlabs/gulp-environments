@@ -6,7 +6,7 @@ A Gulp plug-in that makes it convenient to create separate environments, such as
 
 Install the plugin using npm:
 
-    $ nmp install --save-dev gulp-environments
+    $ npm install --save-dev gulp-environments
 
 Require the plug-in somewhere in your `gulpfile.js`
 
