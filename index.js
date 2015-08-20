@@ -11,7 +11,7 @@ function current(env) {
 }
 
 function reset() {
-  current(make(process.env.NODE_ENV || argv.env || "production"));
+  current(make(process.env.NODE_ENV || argv.env || "development"));
 }
 
 function make(name) {
