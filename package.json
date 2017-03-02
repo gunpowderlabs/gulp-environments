@@ -21,8 +21,9 @@
   },
   "homepage": "https://github.com/gunpowderlabs/gulp-environments#readme",
   "dependencies": {
-    "gulp-if": "^1.2.5",
+    "gulp-if": "^2.0.1",
     "yargs": "^5.0.0"
+
   },
   "devDependencies": {
     "chai": "^3.0.0",
