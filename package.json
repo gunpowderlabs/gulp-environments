@@ -4,7 +4,7 @@
   "description": "A library for easily adding environments (development/production) to Gulp",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha ./index.js ./test/*.js"
+    "test": "./node_modules/mocha/bin/mocha ./index.js ./test/*.js --gulp-environments-internal-test=1"
   },
   "repository": {
     "type": "git",
