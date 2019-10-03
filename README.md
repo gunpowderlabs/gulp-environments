@@ -2,6 +2,8 @@
 
 A Gulp plug-in that makes it convenient to create separate environments, such as development and production, to run your tasks in.
 
+[![CircleCI](https://circleci.com/gh/gunpowderlabs/gulp-environments.svg?style=svg)](https://circleci.com/gh/gunpowderlabs/gulp-environments)
+
 ## Basic usage
 
 Install the plugin using npm:
