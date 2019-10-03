@@ -29,8 +29,9 @@ function make(name) {
 
   envFn.$name = name;
 
-  envFn.task = function() {
+  envFn.task = function(callback) {
     current(envFn);
+    callback();
   };
 
   return envFn;
