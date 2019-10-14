@@ -8,6 +8,8 @@ var refresh = function(path) {
 describe("gulp-environments", function() {
   beforeEach(function() {
     delete process.env.NODE_ENV;
+
+    environments = refresh("../");
   });
 
   it("gives the environment a name", function() {
@@ -26,13 +28,24 @@ describe("gulp-environments", function() {
   });
 
   it("respects command line argument over process environment", function() {
-    process.env.NODE_ENV = "production";
-    process.argv.push("--env=development");
+    var envArg = "--env=development";
 
+    process.env.NODE_ENV = "production";
+    process.argv.push(envArg);
+
+    // Must fully refresh rather than just `.reset()` because the arguments are
+    // only loaded once, so reset won't see the new artificial argument.
     environments = refresh("../");
 
     expect(environments.development()).to.be.true;
     expect(environments.production()).to.be.false;
+
+	 // After this test is done, we need to remove the environment argument and
+	 // hard refresh again so we have a new pristine version.
+    process.argv = process.argv.filter(function(arg) {
+        return (arg !== envArg);
+    });
+    environments = refresh("../");
   });
 
   it("distinguishes between environments", function() {
