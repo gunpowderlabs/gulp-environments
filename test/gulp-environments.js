@@ -8,8 +8,6 @@ var refresh = function(path) {
 describe("gulp-environments", function() {
   beforeEach(function() {
     delete process.env.NODE_ENV;
-
-    environments = refresh("../");
   });
 
   it("gives the environment a name", function() {
