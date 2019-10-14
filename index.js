@@ -2,8 +2,9 @@ var gif = require("gulp-if");
 var argv = require("yargs").argv;
 
 if (argv['gulp-environments-internal-test']) {
-  // the tests require loading argv more explicitly
-  argv = require("yargs").parse(process.argv);
+  // The tests require hard re-loading yargs.
+  delete require.cache[require.resolve("yargs")];
+  argv = require("yargs").argv;
 }
 
 var currentEnv;
