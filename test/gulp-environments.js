@@ -40,10 +40,10 @@ describe("gulp-environments", function() {
     expect(environments.development()).to.be.true;
     expect(environments.production()).to.be.false;
 
-	 // After this test is done, we need to remove the environment argument and
-	 // hard refresh again so we have a new pristine version.
+    // After this test is done, we need to remove the environment argument and
+    // hard refresh again so we have a new pristine version.
     process.argv = process.argv.filter(function(arg) {
-        return (arg !== envArg);
+      return (arg !== envArg);
     });
     environments = refresh("../");
   });
