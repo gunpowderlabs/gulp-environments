@@ -41,7 +41,7 @@ By default, gulp-environments uses the NODE_ENV environment variable to determin
 
     NODE_ENV=development gulp build
 
-You can also pass a command line flag --env to set it:
+You can also pass a command line flag --env to set it (takes precedence over NODE_ENV):
 
     gulp build --env development
 
